@@ -1,4 +1,3 @@
-import { Float, Html } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 import React, { useRef, useState } from "react";
 import * as THREE from 'three';
@@ -32,26 +31,4 @@ export const TextBoard = ({ children }: React.PropsWithChildren) => {
       {children}
     </group>
   )
-}
-
-export const HTMLBoard = ({ children }: React.PropsWithChildren) => {
-  return (
-    <>
-      <Float floatIntensity={1} position={[0, 2, 0]}>
-        <group rotation={[0, Math.PI / 5, 0]}>
-          <Html
-            style={{
-              userSelect: "none",
-              background: "transparent",
-              pointerEvents: "auto",
-            }}
-            wrapperClass="component-transparent"
-            castShadow={false}
-          >
-            {children}
-          </Html>
-        </group>
-      </Float>
-    </>
-  );
 }
