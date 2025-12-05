@@ -1,7 +1,10 @@
 import React from "react";
 
 interface SocialBtnProps {
-  Icon: React.ElementType;
+ Icon: React.ComponentType<{
+    size?: number;
+    className?: string;
+  }>;
   href: string;
 }
 
