@@ -6,9 +6,10 @@ interface SocialBtnProps {
     className?: string;
   }>;
   href: string;
+  className?: string
 }
 
-const SocialBtn = ({ Icon, href }: SocialBtnProps) => {
+const SocialBtn = ({ Icon, href, className }: SocialBtnProps) => {
   return (
     <div className="relative w-7 h-7 cursor-pointer group rounded-full hover:bg-gray-300">
       <svg
@@ -26,7 +27,7 @@ const SocialBtn = ({ Icon, href }: SocialBtnProps) => {
         />
       </svg>
       <button
-        className="absolute inset-0 flex items-center justify-center cursor-pointer"
+        className={`${className} absolute inset-0 flex items-center justify-center cursor-pointer`}
         onClick={() => window.open(href, "_blank", "noopener,noreferrer")}
       >
         <Icon

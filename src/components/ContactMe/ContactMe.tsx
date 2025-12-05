@@ -20,7 +20,7 @@ const ContactMe = () => {
         fontSize={0.3}
         color="black"
         onClick={() => {
-          window.location.href = "mailto:yourname@gmail.com";
+          window.location.href = "mailto:gcprashant555@gmail.com";
         }}
         font="/fonts/gothic/science-gothic.ttf"
       >
