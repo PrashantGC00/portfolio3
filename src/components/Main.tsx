@@ -1,11 +1,9 @@
-import { Html, Scroll, ScrollControls } from "@react-three/drei";
+import { Scroll, ScrollControls } from "@react-three/drei";
 import { RotatingBox } from "./RotatingBox";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import ScrollScene from "./ScrollScene";
 
 const Main = () => {
-  const [x, setX] = useState(false);
-
   useEffect(() => {
     const style = document.createElement("style");
     style.textContent = `

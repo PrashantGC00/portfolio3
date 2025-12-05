@@ -1,5 +1,4 @@
-import { Html, Text } from "@react-three/drei";
-import React from "react";
+import { Text } from "@react-three/drei";
 import { TextBoard } from "../Board";
 
 const ContactMe = () => {
@@ -23,7 +22,6 @@ const ContactMe = () => {
         onClick={() => {
           window.location.href = "mailto:yourname@gmail.com";
         }}
-        fontStyle="underline"
         font="/fonts/gothic/science-gothic.ttf"
       >
         gcprashant555@gmail.com

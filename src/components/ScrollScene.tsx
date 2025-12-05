@@ -1,4 +1,4 @@
-import { Html, useScroll } from "@react-three/drei";
+import { useScroll } from "@react-three/drei";
 import AboutMe from "./AboutMe/AboutMe";
 import { useRef } from "react";
 import Skills from "./Skills/Skills";
