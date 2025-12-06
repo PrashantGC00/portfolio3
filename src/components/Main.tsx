@@ -1,7 +1,12 @@
 import { Scroll, ScrollControls } from "@react-three/drei";
-import { RotatingBox } from "./RotatingBox";
 import { useEffect } from "react";
-import ScrollScene from "./ScrollScene";
+import ContactMe from "./ContactMe/ContactMe";
+import Projects from "./Projects/Projects";
+import Skills from "./Skills/Skills";
+import AboutMe from "./AboutMe/AboutMe";
+import { RotatingDancer } from "./RotatingModals/RotatingDancer";
+import CameraController from "../utils/CameraControler";
+import { RotatingStage } from "./RotatingModals/RotatingStage";
 
 const Main = () => {
   useEffect(() => {
@@ -11,7 +16,6 @@ const Main = () => {
         display: none;
       }
       div {
-        -ms-overflow-style: none;
         scrollbar-width: none;
       }
     `;
@@ -24,7 +28,6 @@ const Main = () => {
 
   return (
     <>
-      {/* <OrbitControls /> */}
       <ambientLight intensity={0.7} />
       <directionalLight
         position={[5, 15, 5]}
@@ -39,20 +42,39 @@ const Main = () => {
         shadow-camera-top={10}
         shadow-camera-bottom={-10}
       />
-      {}
-      <ScrollControls pages={3} damping={1.5} distance={2}>
-        <RotatingBox />
+      <ScrollControls pages={4} damping={2} distance={3}>
+        <CameraController />
+        <RotatingDancer />
 
         <mesh
-          rotation={[-Math.PI / 2, 0, 0]}
+          // rotation={[-Math.PI / 2, 0, 0]}
           position={[0, -2, 0]}
           receiveShadow
         >
-          <planeGeometry args={[50, 50]} />
+          <RotatingStage />
+          {/* <planeGeometry args={[50, 50]} /> */}
           <meshStandardMaterial color="#ffffff" metalness={0} roughness={0.1} />
         </mesh>
         <Scroll>
-          <ScrollScene />
+          <group position={[0, 2.2, 0]}>
+            <AboutMe />
+          </group>
+        </Scroll>
+
+        <Scroll>
+          <group position={[-7, -10, 0]}>
+            <Skills />
+          </group>
+        </Scroll>
+        <Scroll>
+          <group position={[0, -20, 0]}>
+            <Projects />
+          </group>
+        </Scroll>
+        <Scroll>
+          <group position={[-10, -33, 0]}>
+            <ContactMe />
+          </group>  
         </Scroll>
       </ScrollControls>
     </>

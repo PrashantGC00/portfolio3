@@ -5,8 +5,8 @@ const AboutMe = () => {
   return (
     <TextBoard>
       <Text
-        position={[-3, 1.7, 4]}
-        rotation={[0, -Math.PI / 1.6, 0]}
+        position={[-5.5, 1.7, 0]}
+        rotation={[0, -Math.PI / 8, 0]}
         fontSize={0.5}
         color="black"
         font="/fonts/gothic/science-gothic.ttf"
@@ -14,24 +14,25 @@ const AboutMe = () => {
         Prashant G.C.
       </Text>
       <Text
-        position={[-3, 1.2, 4]}
-        rotation={[0, -Math.PI / 1.6, 0]}
-        fontSize={0.2}
+        position={[-5.5, 1.2, 0]}
+        rotation={[0, -Math.PI / 8, 0]}
+        fontSize={0.25}
         color="black"
         font="/fonts/gothic/science-gothic.ttf"
       >
-        Jr. Developer
+        Software Developer
       </Text>
       <Text
-        position={[-3, 0.7, 4]}
-        rotation={[0, -Math.PI / 1.6, 0]}
-        fontSize={0.1}
+        position={[-3, 1.6, 5]}
+        rotation={[0, -Math.PI / 2.2, 0]}
+        fontSize={0.15}
         color="black"
-        maxWidth={4}
+        maxWidth={4.2}
         font="/fonts/gothic/science-gothic.ttf"
       >
-        Software developer | Problem solver | Tech enthusiast | I build web apps
-        and interactive experiences with a focus on clean code and usability.
+        I am a software developer focused on building clean, scalable web
+        applications and interactive user experiences with modern JavaScript
+        frameworks.
       </Text>
     </TextBoard>
   );

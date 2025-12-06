@@ -44,7 +44,9 @@ function App() {
             </svg>
             <button
               className={`absolute inset-0 flex items-center justify-center cursor-pointer`}
-              onClick={() => window.location.href = "mailto:gcprashant555@gmail.com"}
+              onClick={() =>
+                (window.location.href = "mailto:gcprashant555@gmail.com")
+              }
             >
               <Mail
                 size={16}
